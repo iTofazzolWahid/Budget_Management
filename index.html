@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Managment</title>
+
+    <!-- Vanila CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Main Content -->
+    <h1>Budget Managment💸</h1>
+    <main class="main-flex container">
+        <!-- Left Content:Image-->
+        <section id="left-picture">
+            <div>
+                <img src="images/budget-image.jpg" alt="" />
+            </div>
+        </section>
+
+        <!--Right Content: Calculation-->
+        <section id="right-calculation">
+            <div>
+                <!-- Income Section -->
+                <h3>Monthly Income</h3>
+                <div class="flex basic-margin">
+                    <p class="margin-right">Income:</p>
+                    <input id="income-cost" class="input-field" type="text" />
+                </div>
+
+                <!-- Expenses Section -->
+                <h3>Monthly Expenses</h3>
+                <div class="flex basic-margin">
+                    <p>Food:</p>
+                    <input id="food-cost" class="input-field" type="text" />
+                </div>
+                <div class="flex basic-margin">
+                    <p>Rent:</p>
+                    <input id="rent-cost" class="input-field" type="text" />
+                </div>
+                <div class="flex basic-margin">
+                    <p>Utilities:</p>
+                    <input id="utilities-cost" class="input-field" type="text" />
+                </div>
+                <button class="btn text-center block" onclick="calculate()">Calculate</button>
+
+                <!-- Display Expenses & Balance -->
+                <h4>Total Expenses: $<span id="display-expense">0000</span></h4>
+                <h4>Balance: $<span id="display-balance">0000</span></h4>
+
+                <!-- Savings Section -->
+                <div class="flex basic-margin saving">
+                    <p class="save-p">Save:</p>
+                    <input class="input-field saving-input" id="saving-amount" type="text" />
+                    <span class="parsent">%</span>
+                    <button class="btn" onclick="save()">Save</button>
+                </div>
+                <h4>Saving Amount: $<span id="display-saving">0000</span></h4>
+                <h4>Remaining Balance: $<span id="display-remaining">0000</span></h4>
+            </div>
+        </section>
+    </main>
+
+    <!-- Link JS -->
+    <script src="app.js"></script>
+</body>
+
+</html>
